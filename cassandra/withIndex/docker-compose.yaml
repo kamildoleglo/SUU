@@ -1,0 +1,24 @@
+janus:
+  image: "janusgraph/janusgraph"
+  hostname: "janus-graph-container"
+  ports:
+          - "8182:8182"
+cassandra:
+  image: "cassandra:3.11"
+  hostname: "cassandra-container"
+  environment:
+          CASSANDRA_START_RPC: "true"
+  ports:
+          - "9160:9160"
+          - "9042:9042"
+          - "7199:7199"
+          - "7000:7000"
+          - "7001:7001"
+elastic:
+  image: "elasticsearch:7.6.2"
+  ports:
+         - "9200:9200"
+         - "9300:9300"
+  environment:
+         - "discovery.type=single-node"
+  hostname: "elasticsearch"
