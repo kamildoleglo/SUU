@@ -1,0 +1,5 @@
+janus:
+  image: "janusgraph/janusgraph"
+  hostname: "janus-graph-container"
+  ports:
+          - "8182:8182"
